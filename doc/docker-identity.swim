@@ -1,0 +1,66 @@
+Docker Identity
+===============
+
+Framework for Self Identifying Docker Containers
+
+= Synopsis
+
+  > did identify dids/fortune
+  {"name":"dids/fortune",...}
+  > did run dids/fortune
+  Fortune server running on http://0.0.0.0:12345
+  > curl http://0.0.0.0:12345/
+  {"fortune":"Put your Nose to the Grindstone!\n-- Amalgamated Plastic Surgeons and Toolmakers, Ltd.\n"}
+
+= Description
+
+*Docker Identity* is a project to make Docker containers identify themselves.
+ie Declare what they do, how they do it, and how they are configured / run.
+
+The `did` command can run container images that meet this contract, ensuring
+that they are run according to spec.
+
+= Git Repository Branches
+
+All of the resources of the Docker Identity project are in this repository, but
+on separate, unrelated branches. The important branches are:
+
+- `did`
+
+  The `did` CLI command. This command is a companion to the `docker` CLI
+  command itself.
+
+- `dids`
+
+  A set of build command for sample indentity aware containers.
+
+- `spec`
+
+  The Docker Identity specification. Describes the domain of the Identity
+  project, and defines the `identity.yml` data structures that provide
+  identity.
+
+- `web/info`
+
+  Source code for the https://info.dockerid.com website.
+
+= Docker Identity Resources
+
+- Docker Identity Websites
+
+  * http://info.dockerid.com
+  * http://hub.dockerid.com
+
+- GitHub Organization
+
+  https://github.org/docker-id
+
+- Docker Hub
+
+  https://hub.docker.com/r/dids/
+
+= Copyright & License
+
+Copyright 2016. Ingy döt Net.
+
+The MIT License (MIT)
